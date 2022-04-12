@@ -52,7 +52,7 @@ export default function Details(){
         <h2>Sinópse</h2>
         <p>{movie.overview}</p>
         <h2>Elenco</h2>
-        <div style={{ display:"flex", height:"430px", width: "600px", overflow:"auto"}}>
+        <div style={{ display:"flex", height:"440px", width: "600px", overflow:"auto"}}>
          {
              cast.map((item, index) => (
                  <Cast

@@ -28,7 +28,7 @@ export default function Home () {
     }
 
     useEffect(()=>{
-        api.get("/list/80?language=pt-br")
+        api.get("/list/1?language=pt-br")
         .then(response => setMovies(response.data.items))
     },[])
 
@@ -36,10 +36,12 @@ export default function Home () {
     return (
      <Container>
          <Row>
-             <Col>
+             <Col className="mt-5 mb-5" style={{marginLeft: "350px"}}>
             <form onSubmit={handleSubmit}>
-            <input type="text" value={query} onChange={handleInput} placeholder="buscar filme"></input>
-             <button >buscar</button>
+            <div className="form-group">
+            <input className="input-search" type="text" value={query} onChange={handleInput} placeholder="buscar filme"></input>
+             <button className="btn-search">buscar</button>
+            </div>
             </form>
              </Col>
          </Row>
