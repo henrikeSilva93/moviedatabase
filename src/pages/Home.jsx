@@ -28,7 +28,7 @@ export default function Home () {
     }
 
     useEffect(()=>{
-        api.get("/list/1?language=pt-br")
+        api.get("/list/2?language=pt-br")
         .then(response => setMovies(response.data.items))
     },[])
 
