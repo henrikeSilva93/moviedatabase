@@ -33,7 +33,7 @@ export default function Details(){
         getMovie()
         getCast()
     },[])
-   console.log(Object.keys(movie))
+    
     return (
         <Container>
         <Row className="mt-5" >
