@@ -1,9 +1,11 @@
 
+import { Link } from 'react-router-dom'
 import '../css/cast.css'
 
-export default function Cast({img, role, actor}){
+export default function Cast({img, role, actor,id}){
     return (
-     <div className="card-container">
+     <Link to={`/actorDetails/${id}`} style={{textDecoration: "none", color: "black"}}>
+         <div className="card-container">
          <div className="card-img">
             <img src={img} alt="" srcset="" />
          </div>
@@ -12,5 +14,6 @@ export default function Cast({img, role, actor}){
              <p style={{fontSize:"0.7rem"}}>{role}</p>
          </div>
      </div>
+     </Link>
     )
 }

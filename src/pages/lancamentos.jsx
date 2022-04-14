@@ -3,6 +3,7 @@ import { Col, Container, Row } from "react-bootstrap"
 import { api } from "../services/api"
 import '../css/main.css'
 import CardMovie from "../components/Card"
+import Loading from "../components/loading"
 
 export default function Lancamentos(){
     let [movies, setMovies] = useState([])
@@ -17,6 +18,7 @@ export default function Lancamentos(){
         <Container>
             <Row>
                 <Col>
+                {!movies.length  &&  <Loading/>}
                 <div className="itens">
         {
           movies.map((item, index) =>(

@@ -25,3 +25,10 @@
    padding-left: 40px;
    
 }
+
+.loading {
+   width: 100vw;
+   height: 100vh;
+   z-index: 5000000;
+   overflow: hidden;
+}

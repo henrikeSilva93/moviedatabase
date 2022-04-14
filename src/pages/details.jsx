@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { Col, Container, Row } from "react-bootstrap"
 import { useParams } from "react-router-dom"
 import Cast from "../components/cast"
+import Loading from "../components/loading"
 import { api } from "../services/api"
 
 export default function Details(){
@@ -32,12 +33,12 @@ export default function Details(){
         getMovie()
         getCast()
     },[])
-   
+   console.log(Object.keys(movie))
     return (
         <Container>
         <Row className="mt-5" >
         <Col>
-        
+        { Object.keys(movie).length === 0 &&  <Loading/>}
         <div className="poster d-flex justify-content-end">
             <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt={movie.tagline} srcset="" />
         </div>
@@ -57,6 +58,7 @@ export default function Details(){
              cast.map((item, index) => (
                  <Cast
                  key={index}
+                 id={item.id}
                  actor={item.name}
                  role={item.character}
                  img={`https://image.tmdb.org/t/p/w200/${item.profile_path}`}

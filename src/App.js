@@ -8,6 +8,7 @@ import Home from './pages/Home'
 import NavbarMenu from "./components/Navbar";
 import Details from "./pages/details";
 import Lancamentos from "./pages/lancamentos";
+import ActorDetails from "./pages/actorDetails";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="detalhes/:id" element={<Details/>} />
         <Route path="lancamentos" element={<Lancamentos/>} />
         <Route path="lancamentos/detalhes/:id" element={<Details/>} />
+        <Route path="/actorDetails/:id" element={<ActorDetails/>} />
       </Routes>
      </BrowserRouter>
     </div>

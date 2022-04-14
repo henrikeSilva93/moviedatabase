@@ -6,6 +6,9 @@ import '../css/main.css'
 
 import CardMovie from "../components/Card"
 import {api} from '../services/api'
+import Loading from "../components/loading"
+
+
 
 
 
@@ -28,14 +31,16 @@ export default function Home () {
     }
 
     useEffect(()=>{
-        api.get("/list/2?language=pt-br")
+        api.get("/list/1?language=pt-br")
         .then(response => setMovies(response.data.items))
     },[])
 
     
     return (
+       
      <Container>
          <Row>
+       {!movies.length  &&  <Loading/>}
              <Col className="mt-5 mb-5" style={{marginLeft: "350px"}}>
             <form onSubmit={handleSubmit}>
             <div className="form-group">
