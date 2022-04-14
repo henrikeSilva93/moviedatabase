@@ -7,6 +7,7 @@ import { api } from '../services/api'
 export default function ActorDetails() {
     const {id} = useParams()
     const [actor, setActor] = useState({})
+
     const getAge = (bday) => {
         const [year, month, day] = bday.split("-")
        const data = new Date()
@@ -32,6 +33,7 @@ const getActor = async () => {
         getActor()
        
     },[])
+    
   return (
     <Container>
     <Row className="mt-5" >
