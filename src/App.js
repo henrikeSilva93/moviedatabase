@@ -9,6 +9,7 @@ import NavbarMenu from "./components/Navbar";
 import Details from "./pages/details";
 import Lancamentos from "./pages/lancamentos";
 import ActorDetails from "./pages/actorDetails";
+import Series from "./pages/series";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="lancamentos" element={<Lancamentos/>} />
         <Route path="lancamentos/detalhes/:id" element={<Details/>} />
         <Route path="/actorDetails/:id" element={<ActorDetails/>} />
+        <Route path="/series" element={<Series/>} />
       </Routes>
      </BrowserRouter>
     </div>

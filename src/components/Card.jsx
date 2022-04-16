@@ -12,7 +12,6 @@ export default function CardMovie({image,title, children, id}){
           <Card.Text>
           {children}
           </Card.Text>
-          <Button variant="primary" onClick={()=> navigate(`detalhes/${id}`)}>ver mais</Button>
         </Card.Body>
       </Card>
     )

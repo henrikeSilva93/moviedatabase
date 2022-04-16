@@ -61,7 +61,7 @@ export default function Details(){
                  id={item.id}
                  actor={item.name}
                  role={item.character}
-                 img={`https://image.tmdb.org/t/p/w200/${item.profile_path}`}
+                 img={item.profile_path ? `https://image.tmdb.org/t/p/w200/${item.profile_path}` : "https://colegioclassea.com.br/wp-content/themes/PageLand/assets/img/avatar/avatar.jpg"}
                  />
              ))
          }
